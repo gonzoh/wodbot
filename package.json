@@ -1,0 +1,11 @@
+{
+  "name": "wodbot",
+  "version": "0.0.1",
+  "description": "WoDBot",
+  "main": "bot.js",
+  "author": "gonzoh",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "winston": "^3.1.0"
+  }
+}

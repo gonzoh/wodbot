@@ -42,3 +42,23 @@ bot.on('message', function (msg){
 client.on('error', console.error);
 
 bot.login(authToken);
+
+
+///////
+
+
+const http = require('http');
+
+const PORT = process.env.PORT || 5000;
+
+const server = http.createServer(function requestHandler(request, response) {
+    response.end("OK");
+});
+
+server.listen(PORT, (err) => {
+    if (err) {
+        return console.error('something bad happened', err);
+    }
+
+    console.info("server is listening on" +PORT);
+})

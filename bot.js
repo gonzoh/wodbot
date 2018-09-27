@@ -34,10 +34,13 @@ bot.on('message', function (msg){
                 var n = parseInt(args[0],10);
                 var dc = parseInt(args[1],10) || 6;
                 var roll = rollDice(n,dc);
-                msg.reply(roll);
+                return msg.reply(roll);
             break;
          }
      }
+});
+bot.catch((err) => {
+    console.log('bot error: ', err);
 });
 
 bot.login(authToken);

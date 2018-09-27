@@ -39,8 +39,6 @@ bot.on('message', function (msg){
          }
      }
 });
-bot.catch((err) => {
-    console.log('bot error: ', err);
-});
+client.on('error', console.error);
 
 bot.login(authToken);
